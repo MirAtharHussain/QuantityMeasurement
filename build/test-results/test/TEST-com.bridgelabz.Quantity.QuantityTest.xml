@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.Quantity.QuantityTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-26T11:02:25" hostname="DESKTOP-ECJSPHG" time="0.004">
+<testsuite name="com.bridgelabz.Quantity.QuantityTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2020-04-26T19:05:38" hostname="DESKTOP-ECJSPHG" time="0.015">
   <properties/>
-  <testcase name="givenInchValueCheckForEquality" classname="com.bridgelabz.Quantity.QuantityTest" time="0.004"/>
+  <testcase name="givenValueCheckForEquality" classname="com.bridgelabz.Quantity.QuantityTest" time="0.007"/>
+  <testcase name="givenInchObjectReferences_IFNotSame_ShouldReturnTrue" classname="com.bridgelabz.Quantity.QuantityTest" time="0.001"/>
+  <testcase name="givenInch_IfNotNull_ShouldReturnTrue" classname="com.bridgelabz.Quantity.QuantityTest" time="0.0"/>
+  <testcase name="given0Inchand1Inch_ShouldReturnNotEqual" classname="com.bridgelabz.Quantity.QuantityTest" time="0.0"/>
+  <testcase name="given1FeetAnd1Inch_ShouldReturnNotEqual" classname="com.bridgelabz.Quantity.QuantityTest" time="0.001"/>
+  <testcase name="given0Inchand0Inch_ShouldReturnEqual" classname="com.bridgelabz.Quantity.QuantityTest" time="0.0"/>
+  <testcase name="givenObjectReferences_IFNotSame_ShouldReturnTrue" classname="com.bridgelabz.Quantity.QuantityTest" time="0.0"/>
+  <testcase name="givenFeet_IfNotNull_ShouldReturnTrue" classname="com.bridgelabz.Quantity.QuantityTest" time="0.0"/>
+  <testcase name="givenInchObject_CheckType_OfFeetClass" classname="com.bridgelabz.Quantity.QuantityTest" time="0.001"/>
+  <testcase name="given0Feetand1Feet_ShouldReturnNotEqual" classname="com.bridgelabz.Quantity.QuantityTest" time="0.0"/>
+  <testcase name="givenInchValueCheckForEquality" classname="com.bridgelabz.Quantity.QuantityTest" time="0.0"/>
+  <testcase name="givenObject_CheckType_OfFeetClass" classname="com.bridgelabz.Quantity.QuantityTest" time="0.0"/>
+  <testcase name="given0Feetand0Feet_ShouldReturnEqual" classname="com.bridgelabz.Quantity.QuantityTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
