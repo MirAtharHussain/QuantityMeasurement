@@ -147,10 +147,33 @@ public class QuantityTest {
     }
 
     @Test
-    public void given3FeetAnd1Yard_WhenCompared_ShouldReturnEqual() {
+    public void given3FeetAnd1Yard_WhenCompared_ShouldReturnEqualLength() {
         Length feet1 = new Length(Length.Unit.FEET,3.0);
         Length yard1 = new Length(Length.Unit.YARD,1.0);
         boolean compareCheck = feet1.compare(yard1);
+        Assert.assertTrue(compareCheck);
+    }
+
+    @Test
+    public void given1Feetand1Yard_WhenComapred_ShouldReturnNotEqualLength() {
+        Length feet1 = new Length(Length.Unit.FEET,1.0);
+        Length yard1 = new Length(Length.Unit.YARD,1.0);
+        boolean compareCheck = feet1.compare(yard1);
+        Assert.assertFalse(compareCheck);
+    }
+    @Test
+    public void given1Inchand1Yard_WhenComapred_ShouldReturnNotEqualLength() {
+        Length inch1 = new Length(Length.Unit.INCH,1.0);
+        Length yard1 = new Length(Length.Unit.YARD,1.0);
+        boolean compareCheck = inch1.compare(yard1);
+        Assert.assertFalse(compareCheck);
+    }
+
+    @Test
+    public void given1YardAnd36Inch_WhenCompared_ShouldReturnEqual() {
+        Length yard1 = new Length(Length.Unit.YARD,1.0);
+        Length inch1 = new Length(Length.Unit.INCH,36.0);
+        boolean compareCheck = yard1.compare(inch1);
         Assert.assertTrue(compareCheck);
     }
 }
