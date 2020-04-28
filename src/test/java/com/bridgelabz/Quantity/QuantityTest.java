@@ -205,4 +205,30 @@ public class QuantityTest {
         double centiMeter = inch.covertInToCentiMeter(Length.Unit.INCH, 2.0);
         Assert.assertEquals(5.0,centiMeter,0.0);
     }
+
+    @Test
+    public void given2InchAnd2Inch_WhenAdded_ShouldReturnInInch() {
+        Length inch = new Length(Length.Unit.INCH, 2.0);
+        double addTwoLengths = inch.addTwoLengths(Length.Unit.INCH, 2.0, Length.Unit.INCH, 2.0);
+        Assert.assertEquals(4.0,addTwoLengths, 0.0);
+    }
+    @Test
+    public void given1FeetAnd2Inch_WhenAdded_ShouldReturnInInch() {
+        Length inch = new Length(Length.Unit.INCH, 2.0);
+        double addTwoLengths = inch.addTwoLengths(Length.Unit.FEET, 1.0, Length.Unit.INCH, 2.0);
+        Assert.assertEquals(14.0,addTwoLengths, 0.0);
+    }
+    @Test
+    public void given2InchAnd1Feet_WhenAdded_ShouldReturnInInch() {
+        Length inch = new Length(Length.Unit.INCH, 2.0);
+        double addTwoLengths = inch.addTwoLengths(Length.Unit.FEET, 1.0, Length.Unit.FEET, 1.0);
+        Assert.assertEquals(24.0,addTwoLengths, 0.0);
+    }
+    @Test
+    public void given2InchAnd2andHalfCentimeter_WhenAdded_ShouldReturnInInch() {
+        Length inch = new Length(Length.Unit.INCH, 2.0);
+        double addTwoLengths = inch.addTwoLengths(Length.Unit.INCH, 2.0, Length.Unit.CENTIMETER, 2.5);
+        Assert.assertEquals(3.0,addTwoLengths, 0.0);
+
+    }
 }
