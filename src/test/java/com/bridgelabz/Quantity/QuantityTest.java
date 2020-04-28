@@ -229,6 +229,18 @@ public class QuantityTest {
         Length inch = new Length(Length.Unit.INCH, 2.0);
         double addTwoLengths = inch.addTwoLengths(Length.Unit.INCH, 2.0, Length.Unit.CENTIMETER, 2.5);
         Assert.assertEquals(3.0,addTwoLengths, 0.0);
+    }
 
+    @Test
+    public void given1GallonandLitreofWater_WhenCompared_ShouldReturnTrue() {
+        Volume volume = new Volume(Volume.Unit.GALLON, 1.0);
+        double inTOLitres = volume.convertInTOLitres(Volume.Unit.GALLON, 1.0);
+        Assert.assertEquals(3.78,inTOLitres,0.0);
+    }
+    @Test
+    public void given1Litreand1000mlofWater_WhenCompared_ShouldReturnTrue() {
+        Volume volume = new Volume(Volume.Unit.GALLON, 1.0);
+        double inTOMl = volume.convertInTOMl(Volume.Unit.LITRE,1.0);
+        Assert.assertEquals(1000,inTOMl,0.0);
     }
 }
