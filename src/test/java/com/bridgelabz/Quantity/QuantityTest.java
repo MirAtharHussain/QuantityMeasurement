@@ -198,4 +198,11 @@ public class QuantityTest {
         Assert.assertEquals(3.0,covertInToFeet,0.0);
 
     }
+
+    @Test
+    public void given2InchAnd5CentiMeter_WhenCompared_ShoudReturnEqual() {
+        Length inch = new Length(Length.Unit.INCH, 2.0);
+        double centiMeter = inch.covertInToCentiMeter(Length.Unit.INCH, 2.0);
+        Assert.assertEquals(5.0,centiMeter,0.0);
+    }
 }

@@ -10,8 +10,9 @@ public class Length{
     private static final double YARD_TO_FEET = 3.0;
     private static final double YARD_TO_INCH = 36.0;
     private static final double INCH_TO_YARD = 1.0/36.0 ;
+    private static final double INCH_TO_CENTIMETER = 2.5;
 
-    enum Unit{FEET,INCH,YARD};
+    enum Unit{FEET,INCH,YARD,CENTIMETER};
 
     private final Unit unit;
     private final double value;
@@ -35,6 +36,9 @@ public class Length{
     }
     public double covertInToYard(Unit unit, double value) {
         return unit.equals(Unit.FEET)?value*FEET_TO_YARD:unit.equals(Unit.INCH)?value*INCH_TO_YARD:value;
+    }
+    public double covertInToCentiMeter(Unit unit, double value) {
+        return unit.equals(Unit.INCH)?value*INCH_TO_CENTIMETER:value;
     }
 
     @Override
