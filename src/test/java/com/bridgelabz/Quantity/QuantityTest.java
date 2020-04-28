@@ -243,4 +243,16 @@ public class QuantityTest {
         double inTOMl = volume.convertInTOMl(Volume.Unit.LITRE,1.0);
         Assert.assertEquals(1000,inTOMl,0.0);
     }
+    @Test
+    public void given1GallonAnd4litres_WhenAdded_ShouldReturnInLitres() {
+        Volume volume = new Volume(Volume.Unit.GALLON, 1.0);
+        double toLitres = volume.addInToLitres(Volume.Unit.GALLON, 1.0, Volume.Unit.LITRE, 3.78);
+        Assert.assertEquals(7.56, toLitres, 0.0);
+    }
+    @Test
+    public void given1litreAnd1000Ml_WhenAdded_ShouldReturnInLitres() {
+        Volume volume = new Volume(Volume.Unit.LITRE, 1.0);
+        double toLitres = volume.addInToLitres(Volume.Unit.LITRE, 1.0, Volume.Unit.ML, 1000);
+        Assert.assertEquals(2, toLitres, 0.0);
+    }
 }
