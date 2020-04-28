@@ -255,4 +255,23 @@ public class QuantityTest {
         double toLitres = volume.addInToLitres(Volume.Unit.LITRE, 1.0, Volume.Unit.ML, 1000);
         Assert.assertEquals(2, toLitres, 0.0);
     }
+
+    @Test
+    public void given1KiloGramAnd1000Gram_WhenCompared_ShouldReturnEqual() {
+        Weight weight = new Weight(Weight.Unit.KG, 1.0);
+        double grams = weight.convertInToGrams(Weight.Unit.KG, 1.0);
+        Assert.assertEquals(1000,grams,0.0);
+    }
+    @Test
+    public void given1TonneAnd1000KG_WhenCompared_ShouldReturnEqual() {
+        Weight weight = new Weight(Weight.Unit.KG, 1.0);
+        double kGrams = weight.convertInToKG(Weight.Unit.TONNE, 1.0);
+        Assert.assertEquals(1000,kGrams,0.0);
+    }
+    @Test
+    public void given1TonneAnd1000Grams_WhenAdded_ShouldReturnEqualToGivenValue() {
+        Weight weight = new Weight(Weight.Unit.KG, 1.0);
+        double kGrams = weight.addInToKG(Weight.Unit.TONNE, 1.0, Weight.Unit.GRAM, 1000);
+        Assert.assertEquals(1001,kGrams,0.0);
+    }
 }
